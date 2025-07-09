@@ -581,7 +581,7 @@
 			<br>
 			<div class="row justify-content-center">
 				<div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question  </span> <a href="https://docs.google.com/forms/d/1bM40VOSZwVejOteuALEUBrfeCHED1wrkCBCLQfKjrA0/edit" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+					<h2>Have a<span> Question? </span> <a href="https://docs.google.com/forms/d/1bM40VOSZwVejOteuALEUBrfeCHED1wrkCBCLQfKjrA0/edit" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
 				</div>
 			</div>
 				<br>
@@ -598,9 +598,19 @@
    </div>
  </section>
 
- <p align="left">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=pranitha-gorenka.github.io_pranita.io" alt="Visitor badge" />
-</p>
+ <!-- Place this where you want the visitor count to show -->
+<div id="visitor-count" style="font-size: 1rem; color: #333; padding: 5px;">
+  👀 Visitor count: <span id="count">Loading...</span>
+</div>
+
+<!-- Add this script just before the </body> -->
+<script>
+  fetch('https://api.countapi.xyz/update/pranitha-gorenka/portfolio/?amount=1')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('count').textContent = data.value;
+    });
+</script>
  
 	
     <footer class="ftco-footer ftco-section">
